@@ -64,6 +64,7 @@ Hollow Daimonnd Pattern :-
         *      *
             *
 ----
+For Top--
 
 int n = 4;
 for(int i = 0; i<n; i++){
@@ -82,6 +83,8 @@ for(int i = 0; i<n; i++){
     cout << endl;
 }
 
+For Bottom :-
+
 for(int i = 0; i<n-1; i++){
     // space
      
@@ -98,3 +101,79 @@ for(int i = 0; i<n-1; i++){
     }
     cout << endl;
 }
+
+
+                                                 -: Function :-
+
+1. Find sum of 1 to n numbers ?
+
+#include <iostream>
+using namespace std;
+
+int sumN(int n){
+    int sum ==0;
+
+    for(int i = 1; i <=n; i++){
+        sum += i;
+    }
+
+    return sum;
+}
+
+int main(){
+    cout << sumN(4) <<endl;
+
+    return 0;
+}
+
+---------------
+2. Calculate N factorial ?
+
+#include <iostream>
+using namespace std;
+
+int factorialN(int n){
+    int factorial = 1;
+
+    for(int i = 1; i<=n; i++){
+        factorial *= i;
+    }
+    return factorial;
+}
+
+int main(){
+    cout << factorialN(5) << endl;
+
+    return 0;
+}
+-------------
+
+3. Calculate sum of digits of a number ?
+
+#include <iostream>
+using namespace std;
+
+int sumofDigits(int num){
+    int digitSum = 0;
+
+    while(num > 0){
+        int lastDigit = num % 10;
+        num /= 10;
+
+        digitSum += lastDigit;
+    }
+
+    return digitSum;
+}
+
+int main(){
+
+    cout << "sum = " << sumofDigits(2356) << endl;
+    return 0;
+}
+
+
+4. WAF to check if a number is prime or not ?
+5. WAF to print all prime numbers from 1 to N ?
+6. WAF to print nth Fibonacci ?
+7. Calculate nCr binomial coefficient for n & r ?   [nCr = n! /  r!(n-r)! ]
