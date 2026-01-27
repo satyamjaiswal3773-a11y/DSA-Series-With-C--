@@ -177,3 +177,187 @@ int main(){
 5. WAF to print all prime numbers from 1 to N ?
 6. WAF to print nth Fibonacci ?
 7. Calculate nCr binomial coefficient for n & r ?   [nCr = n! /  r!(n-r)! ]
+
+
+                                        Binary Number System :-
+
+Decimal to Binary :-                                        
+-----------------
+
+#include <iostream>
+using namespace std;
+
+int decToBinary(int decNum){
+    int ans = 0, power = 1;
+
+    while(decNum > 0){
+        int rem = decNum % 2;
+        decNum /= 2;
+
+        ans += (rem * power);
+        power *= 10;
+    }
+
+    return ans;
+} 
+
+int main(){
+    int decNum = 50;
+
+    cout << decToBinary(decNum) << endl;
+    return 0;
+}
+
+
+Binary to Decimal :-
+-----------------
+
+#include <iostream>
+using namespace std;
+
+int binToDecimal(int binNum){
+    int ans = 0, power = 1;
+
+    while(binNum > 0){
+        int rem = binNum % 10;
+        ans += (rem * power);
+
+        binNum /= 10;
+        power *= 2;
+    }
+
+    return ans;
+} 
+
+int main(){
+    int binNum = 110010;
+
+    cout << binToDecimal(binNum) << endl;
+    return 0;
+}
+
+Two's complement :-
+----------------
+
+
+                                          -:Array Syntax :-
+                                    
+Find smallest/largest in Array -
+-----------
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int nums[] = {5,15,22,1,-15,-24};
+    int size = 6;
+
+    int smallest = INT_MAX;
+    int largest = INT_MIN;
+
+    for(int i = 0; i<size; i++){
+        if(nums[i] < smallest){    // to find smallest number
+            smallest = nums[i];
+        }
+
+        smallest = min(nums[i],smallest);    // to find smallest number
+        largest = max(nums[i], largest);   // to find largest number
+    }
+
+    cout << "smallest = " << smallest << endl;
+    cout << "largest = " << largest << endl;
+    return 0;
+}
+
+Find Index where smallest and largest value are stored ?
+----
+
+Pass by reference :-
+-----------------
+
+#include <iostream>
+using namespace std;
+
+void changeArray(int arr[], int size){
+    cout << "in function\n";
+    for(int i=0; i<size; i++){
+        arr[i] = 2*arr[i];
+    }
+}
+
+int main(){
+    int arr[] = {1,2,3};
+
+    changeArray(arr,3);
+
+    cout << "in main\n";
+
+    for(int i=0; i<3; i++){
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+
+Linear Search :-
+--------------
+
+#include <iostream>
+using namespace std;
+
+int linearSearch(int arr[],int size,int target){
+    for(int i=0; i<size; i++){
+        if(arr[i] == target){
+            return i;
+        }
+    }
+
+    return -1;
+}
+
+int main(){
+    int arr[] = {4,3,7,8,1,2,5};
+    int size = 7;
+    int target = 8;
+
+    cout << linearSearch(arr,size,target) << endl;
+
+    return 0;
+}
+
+Reverse an Array :-  (using to pointer approach)
+----------------
+
+#include <iostream>
+using namespace std;
+
+void reverseArray(int arr[], int size){
+    int start = 0,end= size-1;
+    while (start < end)
+    {
+        swap(arr[start],arr[end]);
+        start++;
+        end--;
+    }
+    
+}
+
+int main(){
+    int arr[]= {2,3,4,5,6,7,8};
+    int size = 7;
+
+    reverseArray(arr,size);
+
+    for(int i=0; i<size; i++){
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+
+WAF to Calculate sum & product of all numbers in a array ?
+WAF to swap the max & min number of an array?
+WAF to print all the unique values in an array?
+WAF to print intersection of 2 arrays?
