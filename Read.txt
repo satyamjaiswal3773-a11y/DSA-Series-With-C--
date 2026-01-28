@@ -361,3 +361,169 @@ WAF to Calculate sum & product of all numbers in a array ?
 WAF to swap the max & min number of an array?
 WAF to print all the unique values in an array?
 WAF to print intersection of 2 arrays?
+
+
+                                                    -: Vectors :-
+
+Vector Syntax:-
+-----------
+           - vector<int>vec;
+           - vector<int>vec={1,2,3}
+           - vector<int>vec(3,4)
+
+#include <iostream>
+#include <vector>       // for using vector be must include this namespace
+using namespace std;
+
+
+int main(){
+    vector<char> vec = {'A','B','C','D'};
+
+   for (char val : vec)   // for each loop
+   {
+        cout << val << endl;
+   }
+   
+
+    return 0;
+}
+
+Vector Functions :-
+----------------
+                  - size
+                  - push_back
+                  - pop_back
+                  - front
+                  - back
+                  - at
+
+size :-
+----
+
+#include <iostream>
+#include <vector>       // for using vector be must include this namespace
+using namespace std;
+
+
+int main(){
+    vector<char> vec = {'A','B','C','D'};
+
+    cout << "size = " << vec.size() << endl;
+
+   for (char val : vec)   // for each loop
+   {
+        cout << val << endl;
+   }
+   
+
+    return 0;
+}
+
+push_back :-
+---------
+
+#include <iostream>
+#include <vector>       // for using vector be must include this namespace
+using namespace std;
+
+
+int main(){
+    vector<int> vec;
+
+    cout << "size = " << vec.size() << endl;
+    vec.push_back(25);                           // To add value in last 
+    cout << "After = " << vec.size() << endl;
+
+   for (int val : vec)   // for each loop
+   {
+        cout << val << endl;
+   }
+   
+
+    return 0;
+}
+
+pop_back :-
+--------
+
+#include <iostream>
+#include <vector>       // for using vector be must include this namespace
+using namespace std;
+
+
+int main(){
+    vector<int> vec;
+
+    vec.push_back(25);                           // To add value in last 
+    vec.push_back(35);                           
+    vec.push_back(45);                           
+
+    cout << "After = " << vec.size() << endl;
+
+    vec.pop_back();           // To remove  value in last 
+
+   for (int val : vec)   // for each loop
+   {
+        cout << val << endl;
+   }
+   
+
+    return 0;
+}
+
+front  && back  :-
+---------------
+
+#include <iostream>
+#include <vector>       // for using vector be must include this namespace
+using namespace std;
+
+
+int main(){
+    vector<int> vec;
+
+    vec.push_back(25);                           // To add value in last 
+    vec.push_back(35);                           
+    vec.push_back(45);                           
+
+    cout << "After = " << vec.size() << endl;
+
+    vec.pop_back();           // To remove  value in last 
+
+   cout << vec.front() << endl;   // gives first value
+
+   cout << vec.back() << endl;    // gives last value
+
+    return 0;
+}
+
+at :-
+---
+
+#include <iostream>
+#include <vector>       // for using vector be must include this namespace
+using namespace std;
+
+
+int main(){
+    vector<int> vec;
+
+    vec.push_back(25);                           // To add value in last 
+    vec.push_back(35);                           
+    vec.push_back(45);                           
+
+    cout << "After = " << vec.size() << endl;
+
+    vec.pop_back();           // To remove  value in last 
+
+//    cout << vec.front() << endl;   // gives first value
+
+//    cout << vec.back() << endl;    // gives last value
+
+    cout << vec.at(1) << endl;    // to acces value from index
+
+    return 0;
+}
+
+Stactic vs Dynamic Allocation :-
+-----------------------------

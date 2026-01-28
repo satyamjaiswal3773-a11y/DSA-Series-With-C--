@@ -1,27 +1,24 @@
 #include <iostream>
+#include <vector>       // for using vector be must include this namespace
 using namespace std;
 
-void reverseArray(int arr[], int size){
-    int start = 0,end= size-1;
-    while (start < end)
-    {
-        swap(arr[start],arr[end]);
-        start++;
-        end--;
-    }
-    
-}
 
 int main(){
-    int arr[]= {2,3,4,5,6,7,8};
-    int size = 7;
+    vector<int> vec;
 
-    reverseArray(arr,size);
+    vec.push_back(25);                           // To add value in last 
+    vec.push_back(35);                           
+    vec.push_back(45);                           
 
-    for(int i=0; i<size; i++){
-        cout << arr[i] << " ";
-    }
-    cout << endl;
+    cout << "After = " << vec.size() << endl;
+
+    vec.pop_back();           // To remove  value in last 
+
+//    cout << vec.front() << endl;   // gives first value
+
+//    cout << vec.back() << endl;    // gives last value
+
+    cout << vec.at(1) << endl;    // to acces value from index
 
     return 0;
 }
