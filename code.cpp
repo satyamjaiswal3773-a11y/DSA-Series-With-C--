@@ -2,23 +2,16 @@
 #include <vector>       // for using vector be must include this namespace
 using namespace std;
 
+int singleNumber(vector<int>& nums){
+    int ans = 0;
+    for(int val : nums){
+        ans ^= val;
+    }
+    return ans;
+}
 
 int main(){
-    vector<int> vec;
-
-    vec.push_back(25);                           // To add value in last 
-    vec.push_back(35);                           
-    vec.push_back(45);                           
-
-    cout << "After = " << vec.size() << endl;
-
-    vec.pop_back();           // To remove  value in last 
-
-//    cout << vec.front() << endl;   // gives first value
-
-//    cout << vec.back() << endl;    // gives last value
-
-    cout << vec.at(1) << endl;    // to acces value from index
-
+    vector<int> nums = {4, 1, 2, 1, 2};
+    cout << singleNumber(nums) << endl;
     return 0;
 }
